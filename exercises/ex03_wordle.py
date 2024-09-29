@@ -17,7 +17,7 @@ def main(
         print(emojified(guess, secret))
         if guess == secret:
             print(f"You won in {turn}/6 turns!")
-            won = True  # making the condition true so the while loop will stop when user won
+            won = True  # making the condition true so the while loop will stop when won
         turn = turn + 1
     if turn > 6:
         print("X/6 - Sorry, try again tomorrow!")
@@ -64,7 +64,7 @@ def emojified(guess: str, secret: str) -> str:
     emoji_string: str = ""  # emoji string variable to write the emoji string
     while index_2 < len(
         guess
-    ):  # while loop to add corrent boxes to the emoji string after searching for the same chars
+    ):  # while loop to add correct boxes to the emoji string after searching for chars
         if guess[index_2] == secret[index_2]:
             emoji_string = emoji_string + GREEN_BOX
             index_2 = index_2 + 1
