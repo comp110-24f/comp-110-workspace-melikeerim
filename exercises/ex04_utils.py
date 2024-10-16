@@ -5,6 +5,8 @@ __author__ = "730756528"
 
 def all(list_1: list[int], num: int) -> bool:
     """Checks if all elements of the list is equal to num"""
+    if len(list_1) == 0:  # returns False if if list is empty
+        return False
     for elem in list_1:  # for loop to go over every elem
         if elem is not num:  # if one element is not qual to num, return False
             return False
